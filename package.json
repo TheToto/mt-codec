@@ -1,0 +1,37 @@
+{
+  "name": "mt-codec",
+  "version": "1.0.1",
+  "description": "Motion Twin Codec port in JS",
+  "keywords": [
+    "codec",
+    "motion-twin",
+    "flash"
+  ],
+  "author": {
+    "name": "Thomas Lupin"
+  },
+  "homepage": "https://github.com/TheToto/mt-codec",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheToto/mt-codec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheToto/mt-codec/issues"
+  },
+  "main": "lib/index.js",
+  "license": "MIT",
+  "prepublish": "npm run build && npm run test",
+  "scripts": {
+    "build": "yarn clean && tsc -b tsconfig.json",
+    "clean": "rm -rf lib/*",
+    "format": "prettier -w src tests",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "jest": "^28.1.2",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  }
+}
