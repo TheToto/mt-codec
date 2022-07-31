@@ -19,6 +19,11 @@ describe("Codec V1.5", () => {
     test("PioupiouZ string", () => {
         let codec = new CodecV1_5("$RJrjk05eeJrzp5Pazre7z9an788baz61kBKJ1EZ4")
         expect(codec.deserialize("xNOpZUjm:_wKLIAOTqZhMxyRY4bCkElD5hR")).toBe("httpXX__wwwYYpioupiouzYYcom_")
+        console.log(codec.deserialize("xNOpZUjm:AeNLIAOTqZhMxyRY4bCkE_MMUj"))
+        console.log(codec.deserialize("xNOpZUjm:_wKLIAOTqZhMxyRY4bCkElD5hR"))
+        console.log(codec.deserialize("xNOpZUjm:AaPpI3VZsWqWDvaYiv:bF95c3qB"))
+        console.log(codec.deserialize("xNOpZUjm:_wKLIAOTqZhMxyRY4bCkElD5hR"))
+        console.log(codec.serialize(""))
     })
 
     test("Run serialize/deserialize", () => {
