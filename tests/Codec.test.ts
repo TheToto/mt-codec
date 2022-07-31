@@ -1,4 +1,4 @@
-import { CodecV1, CodecV2 } from "../src"
+import { CodecV1, CodecV1_5, CodecV2 } from "../src"
 
 function encodeAndDecodeV2(codec: CodecV2, value: string) {
     return codec.decode(codec.encode(value))
@@ -12,6 +12,18 @@ describe("Codec V2", () => {
     test("With version", () => {
         let codec = new CodecV2("superkey", CodecV2.KUBE_KEY_VERSION)
         expect(encodeAndDecodeV2(codec, "mysupertext")).toBe("mysupertext")
+    })
+})
+
+describe("Codec V1.5", () => {
+    test("PioupiouZ string", () => {
+        let codec = new CodecV1_5("$RJrjk05eeJrzp5Pazre7z9an788baz61kBKJ1EZ4")
+        expect(codec.deserialize("xNOpZUjm:_wKLIAOTqZhMxyRY4bCkElD5hR")).toBe("httpXX__wwwYYpioupiouzYYcom_")
+    })
+
+    test("Run serialize/deserialize", () => {
+        let codec = new CodecV1_5("mysuperkey")
+        expect(codec.deserialize(codec.serialize("mysupertext"))).toBe("mysupertext")
     })
 })
 

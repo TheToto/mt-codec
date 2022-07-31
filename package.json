@@ -19,7 +19,7 @@
     "url": "https://github.com/TheToto/mt-codec/issues"
   },
   "main": "lib/index.js",
-  "license": "MIT",
+  "license": "AGPL-3.0-or-later",
   "prepublish": "npm run build && npm run test",
   "scripts": {
     "build": "yarn clean && tsc -b tsconfig.json",

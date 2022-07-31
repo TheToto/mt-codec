@@ -1,5 +1,7 @@
-// Thanks to @Angelisium for this one ❤️
+// All credits go to @Angelisium for this one ❤️
 // https://gitlab.com/-/snippets/2310955
+
+// Used in old games like Carapass
 
 export class CodecV1 {
     private key: number[]

@@ -1,3 +1,5 @@
+// Used in many "recent" games like Muxxu and Twinoid games
+
 export class CodecV2 {
     private static BASE64_CHARS: string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_"
 
